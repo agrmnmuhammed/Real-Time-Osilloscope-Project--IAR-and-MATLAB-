@@ -1,47 +1,29 @@
-# 📈 MSP430 + MATLAB Real-Time Oscilloscope  
+# MSP430 + MATLAB Real-Time Oscilloscope  
+# MSP430 + MATLAB Gerçek Zamanlı Osiloskop  
 
-## 📌 Description / Açıklama  
+## Project Description / Proje Açıklaması  
 
 **English:**  
-This project implements a **real-time PC oscilloscope** using the MSP430 microcontroller and MATLAB.  
-- An **NE555 timer** generates a square-wave signal.  
-- The signal is sampled by the **MSP430 ADC10**.  
-- Data is transmitted via a **TimerA-based software UART (9600 bps)**.  
-- On the PC side, **MATLAB** receives the data through the COM port and plots it in real-time.  
-- Additionally, the system calculates and displays **amplitude (Vpp)**, **frequency**, and **duty cycle** live.  
+In this project, I use an NE555 timer to generate a square wave signal. The signal is sampled by the MSP430 ADC module and sent to the PC through a TimerA-based software UART running at 9600 bps. On the PC side, MATLAB receives the data via the COM port and plots the waveform in real-time.  
+
+Besides visualizing the waveform, the system also calculates amplitude (Vpp), frequency, and duty cycle in real-time. When I change the settings on the NE555 circuit, the updates are instantly reflected on the MATLAB graph.  
 
 **Türkçe:**  
-Bu proje, **MSP430 mikrodenetleyici** ve **MATLAB** kullanılarak geliştirilen **gerçek zamanlı bir PC osiloskopudur**.  
-- **NE555 zamanlayıcı** kare dalga sinyali üretir.  
-- Sinyal **MSP430 ADC10** ile örneklenir.  
-- Veriler **TimerA tabanlı yazılımsal UART (9600 bps)** üzerinden PC’ye gönderilir.  
-- PC tarafında **MATLAB**, COM portu üzerinden verileri alarak gerçek zamanlı grafik çizer.  
-- Ayrıca sistem, **genlik (Vpp)**, **frekans** ve **duty cycle** değerlerini anlık olarak hesaplayıp ekrana yansıtır.  
+Bu projede NE555 ile üretilen kare dalga sinyalini MSP430’un ADC modülü ile örnekliyorum. Elde edilen verileri TimerA tabanlı yazılımsal UART üzerinden 9600 bps hızında PC’ye gönderiyorum. MATLAB tarafında seri port üzerinden gelen verileri alarak gerçek zamanlı olarak grafikte gösteriyorum.  
 
----
+Grafikte sinyalin dalga formunu görebildiğim gibi aynı zamanda genlik (Vpp), frekans ve duty cycle değerlerini de anlık olarak hesaplayıp izleyebiliyorum. NE555 devresinde yaptığım değişiklikler MATLAB ekranına doğrudan yansıyor.  
 
-## ⚙️ Features / Özellikler  
-- 📡 Software UART communication (TimerA, 9600 bps)  
-- ⚡ Real-time ADC sampling and serial transmission  
-- 📊 Live plotting in MATLAB  
-- 📐 Real-time calculation of Vpp, frequency, and duty cycle  
-- 🔧 Adjustable signal source using NE555 (frequency, duty, amplitude)  
+## Hardware / Donanım  
 
----
-
-## 🛠️ Hardware & Software / Donanım & Yazılım  
-
-**Hardware (Donanım):**  
 - MSP430 LaunchPad  
-- NE555 square wave generator circuit  
-- Resistors, capacitors, power supply (3.3V)  
-- USB-to-PC serial connection  
+- NE555 square wave generator / NE555 kare dalga üreteci  
+- Resistors, capacitors, 3.3 V supply  
+- USB connection to PC  
 
-**Software (Yazılım):**  
+## Software / Yazılım  
+
 - IAR Embedded Workbench (MSP430 C code)  
-- MATLAB (serialport, plotting, signal analysis)  
+- MATLAB (serialport, real-time plotting, signal analysis)  
 
----
-
-## 📂 Project Structure  
+## Project Structure / Proje Yapısı  
 
